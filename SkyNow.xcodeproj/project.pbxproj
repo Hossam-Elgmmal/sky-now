@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F61B0942FD84FAA004B5034 /* SkyNowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0932FD84FAA004B5034 /* SkyNowApp.swift */; };
-		9F61B0962FD84FAB004B5034 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0952FD84FAB004B5034 /* ContentView.swift */; };
+		9F61B0962FD84FAB004B5034 /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0952FD84FAB004B5034 /* MainNavigation.swift */; };
 		9F61B0982FD84FB8004B5034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F61B0972FD84FB8004B5034 /* Assets.xcassets */; };
 		9F61B09B2FD84FB8004B5034 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F61B09A2FD84FB8004B5034 /* Preview Assets.xcassets */; };
 		9F61B09D2FD84FB8004B5034 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B09C2FD84FB8004B5034 /* Persistence.swift */; };
@@ -16,6 +16,25 @@
 		9F61B0AA2FD84FB8004B5034 /* SkyNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0A92FD84FB8004B5034 /* SkyNowTests.swift */; };
 		9F61B0B42FD84FB8004B5034 /* SkyNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0B32FD84FB8004B5034 /* SkyNowUITests.swift */; };
 		9F61B0B62FD84FB8004B5034 /* SkyNowUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0B52FD84FB8004B5034 /* SkyNowUITestsLaunchTests.swift */; };
+		9F61B0C52FD857FD004B5034 /* WeatherRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0C42FD857FD004B5034 /* WeatherRepo.swift */; };
+		9F61B0C82FD85862004B5034 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0C72FD85862004B5034 /* WeatherService.swift */; };
+		9F61B0CB2FD8590D004B5034 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0CA2FD8590D004B5034 /* LocationService.swift */; };
+		9F61B0CE2FD8621E004B5034 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0CD2FD8621E004B5034 /* WeatherResponse.swift */; };
+		9F61B0D02FD86601004B5034 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0CF2FD86601004B5034 /* Location.swift */; };
+		9F61B0D22FD8661C004B5034 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0D12FD8661C004B5034 /* Condition.swift */; };
+		9F61B0D42FD86633004B5034 /* AirQuality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0D32FD86633004B5034 /* AirQuality.swift */; };
+		9F61B0D62FD8664D004B5034 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0D52FD8664D004B5034 /* Current.swift */; };
+		9F61B0D82FD8666D004B5034 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0D72FD8666D004B5034 /* Day.swift */; };
+		9F61B0DA2FD8668C004B5034 /* Astro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0D92FD8668C004B5034 /* Astro.swift */; };
+		9F61B0DC2FD866A1004B5034 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0DB2FD866A1004B5034 /* Hour.swift */; };
+		9F61B0DE2FD866BC004B5034 /* Forecastday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0DD2FD866BC004B5034 /* Forecastday.swift */; };
+		9F61B0E02FD866D0004B5034 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0DF2FD866D0004B5034 /* Forecast.swift */; };
+		9F61B0E52FD87523004B5034 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0E42FD87523004B5034 /* Config.swift */; };
+		9F61B0E82FD8786B004B5034 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0E72FD8786B004B5034 /* WeatherError.swift */; };
+		9F61B0EC2FD88B4B004B5034 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0EB2FD88B4B004B5034 /* NetworkClient.swift */; };
+		9F61B0EF2FD891FA004B5034 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0EE2FD891FA004B5034 /* ErrorMessage.swift */; };
+		9F61B0F12FD89229004B5034 /* ErrorMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0F02FD89229004B5034 /* ErrorMessageController.swift */; };
+		9F61B0F62FD8A559004B5034 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F61B0F52FD8A559004B5034 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +57,7 @@
 /* Begin PBXFileReference section */
 		9F61B0902FD84FAA004B5034 /* SkyNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F61B0932FD84FAA004B5034 /* SkyNowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyNowApp.swift; sourceTree = "<group>"; };
-		9F61B0952FD84FAB004B5034 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F61B0952FD84FAB004B5034 /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
 		9F61B0972FD84FB8004B5034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F61B09A2FD84FB8004B5034 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F61B09C2FD84FB8004B5034 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +67,27 @@
 		9F61B0AF2FD84FB8004B5034 /* SkyNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F61B0B32FD84FB8004B5034 /* SkyNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyNowUITests.swift; sourceTree = "<group>"; };
 		9F61B0B52FD84FB8004B5034 /* SkyNowUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyNowUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F61B0C42FD857FD004B5034 /* WeatherRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepo.swift; sourceTree = "<group>"; };
+		9F61B0C72FD85862004B5034 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		9F61B0CA2FD8590D004B5034 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		9F61B0CD2FD8621E004B5034 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		9F61B0CF2FD86601004B5034 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9F61B0D12FD8661C004B5034 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		9F61B0D32FD86633004B5034 /* AirQuality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQuality.swift; sourceTree = "<group>"; };
+		9F61B0D52FD8664D004B5034 /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		9F61B0D72FD8666D004B5034 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		9F61B0D92FD8668C004B5034 /* Astro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astro.swift; sourceTree = "<group>"; };
+		9F61B0DB2FD866A1004B5034 /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
+		9F61B0DD2FD866BC004B5034 /* Forecastday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecastday.swift; sourceTree = "<group>"; };
+		9F61B0DF2FD866D0004B5034 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		9F61B0E22FD87231004B5034 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		9F61B0E32FD87424004B5034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9F61B0E42FD87523004B5034 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9F61B0E72FD8786B004B5034 /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
+		9F61B0EB2FD88B4B004B5034 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		9F61B0EE2FD891FA004B5034 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		9F61B0F02FD89229004B5034 /* ErrorMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageController.swift; sourceTree = "<group>"; };
+		9F61B0F52FD8A559004B5034 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +138,18 @@
 		9F61B0922FD84FAA004B5034 /* SkyNow */ = {
 			isa = PBXGroup;
 			children = (
-				9F61B0932FD84FAA004B5034 /* SkyNowApp.swift */,
-				9F61B0952FD84FAB004B5034 /* ContentView.swift */,
-				9F61B0972FD84FB8004B5034 /* Assets.xcassets */,
+				9F61B0E32FD87424004B5034 /* Info.plist */,
+				9F61B0E42FD87523004B5034 /* Config.swift */,
 				9F61B09C2FD84FB8004B5034 /* Persistence.swift */,
-				9F61B09E2FD84FB8004B5034 /* SkyNow.xcdatamodeld */,
+				9F61B0932FD84FAA004B5034 /* SkyNowApp.swift */,
+				9F61B0972FD84FB8004B5034 /* Assets.xcassets */,
+				9F61B0E22FD87231004B5034 /* Secrets.xcconfig */,
+				9F61B0ED2FD891E4004B5034 /* common */,
+				9F61B0E62FD8784E004B5034 /* core */,
+				9F61B0C22FD857CC004B5034 /* data */,
+				9F61B0F42FD8A4FC004B5034 /* navigation */,
 				9F61B0992FD84FB8004B5034 /* Preview Content */,
+				9F61B09E2FD84FB8004B5034 /* SkyNow.xcdatamodeld */,
 			);
 			path = SkyNow;
 			sourceTree = "<group>";
@@ -131,6 +177,93 @@
 				9F61B0B52FD84FB8004B5034 /* SkyNowUITestsLaunchTests.swift */,
 			);
 			path = SkyNowUITests;
+			sourceTree = "<group>";
+		};
+		9F61B0C22FD857CC004B5034 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0C92FD858F0004B5034 /* location */,
+				9F61B0C32FD857D6004B5034 /* weather */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		9F61B0C32FD857D6004B5034 /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0C62FD8584A004B5034 /* remote */,
+				9F61B0C42FD857FD004B5034 /* WeatherRepo.swift */,
+			);
+			path = weather;
+			sourceTree = "<group>";
+		};
+		9F61B0C62FD8584A004B5034 /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0CC2FD86203004B5034 /* models */,
+				9F61B0C72FD85862004B5034 /* WeatherService.swift */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		9F61B0C92FD858F0004B5034 /* location */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0CA2FD8590D004B5034 /* LocationService.swift */,
+			);
+			path = location;
+			sourceTree = "<group>";
+		};
+		9F61B0CC2FD86203004B5034 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0CD2FD8621E004B5034 /* WeatherResponse.swift */,
+				9F61B0CF2FD86601004B5034 /* Location.swift */,
+				9F61B0D12FD8661C004B5034 /* Condition.swift */,
+				9F61B0D32FD86633004B5034 /* AirQuality.swift */,
+				9F61B0D52FD8664D004B5034 /* Current.swift */,
+				9F61B0D72FD8666D004B5034 /* Day.swift */,
+				9F61B0D92FD8668C004B5034 /* Astro.swift */,
+				9F61B0DB2FD866A1004B5034 /* Hour.swift */,
+				9F61B0DD2FD866BC004B5034 /* Forecastday.swift */,
+				9F61B0DF2FD866D0004B5034 /* Forecast.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		9F61B0E62FD8784E004B5034 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0EA2FD88B14004B5034 /* network */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		9F61B0EA2FD88B14004B5034 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0E72FD8786B004B5034 /* WeatherError.swift */,
+				9F61B0EB2FD88B4B004B5034 /* NetworkClient.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		9F61B0ED2FD891E4004B5034 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0EE2FD891FA004B5034 /* ErrorMessage.swift */,
+				9F61B0F02FD89229004B5034 /* ErrorMessageController.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		9F61B0F42FD8A4FC004B5034 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				9F61B0952FD84FAB004B5034 /* MainNavigation.swift */,
+				9F61B0F52FD8A559004B5034 /* MainViewModel.swift */,
+			);
+			path = navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +396,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F61B0CB2FD8590D004B5034 /* LocationService.swift in Sources */,
+				9F61B0EF2FD891FA004B5034 /* ErrorMessage.swift in Sources */,
+				9F61B0DE2FD866BC004B5034 /* Forecastday.swift in Sources */,
+				9F61B0E82FD8786B004B5034 /* WeatherError.swift in Sources */,
+				9F61B0C52FD857FD004B5034 /* WeatherRepo.swift in Sources */,
 				9F61B09D2FD84FB8004B5034 /* Persistence.swift in Sources */,
-				9F61B0962FD84FAB004B5034 /* ContentView.swift in Sources */,
+				9F61B0D62FD8664D004B5034 /* Current.swift in Sources */,
+				9F61B0E02FD866D0004B5034 /* Forecast.swift in Sources */,
+				9F61B0962FD84FAB004B5034 /* MainNavigation.swift in Sources */,
+				9F61B0D02FD86601004B5034 /* Location.swift in Sources */,
+				9F61B0F12FD89229004B5034 /* ErrorMessageController.swift in Sources */,
+				9F61B0DC2FD866A1004B5034 /* Hour.swift in Sources */,
+				9F61B0D82FD8666D004B5034 /* Day.swift in Sources */,
+				9F61B0EC2FD88B4B004B5034 /* NetworkClient.swift in Sources */,
 				9F61B0A02FD84FB8004B5034 /* SkyNow.xcdatamodeld in Sources */,
+				9F61B0E52FD87523004B5034 /* Config.swift in Sources */,
+				9F61B0C82FD85862004B5034 /* WeatherService.swift in Sources */,
 				9F61B0942FD84FAA004B5034 /* SkyNowApp.swift in Sources */,
+				9F61B0CE2FD8621E004B5034 /* WeatherResponse.swift in Sources */,
+				9F61B0DA2FD8668C004B5034 /* Astro.swift in Sources */,
+				9F61B0D42FD86633004B5034 /* AirQuality.swift in Sources */,
+				9F61B0F62FD8A559004B5034 /* MainViewModel.swift in Sources */,
+				9F61B0D22FD8661C004B5034 /* Condition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +457,7 @@
 /* Begin XCBuildConfiguration section */
 		9F61B0B72FD84FB8004B5034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -366,6 +519,7 @@
 		};
 		9F61B0B82FD84FB8004B5034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -421,6 +575,7 @@
 		};
 		9F61B0BA2FD84FB8004B5034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -429,6 +584,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SkyNow/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkyNow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +605,7 @@
 		};
 		9F61B0BB2FD84FB8004B5034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,6 +614,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SkyNow/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SkyNow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -477,6 +635,7 @@
 		};
 		9F61B0BD2FD84FB8004B5034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +655,7 @@
 		};
 		9F61B0BE2FD84FB8004B5034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +675,7 @@
 		};
 		9F61B0C02FD84FB8004B5034 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +693,7 @@
 		};
 		9F61B0C12FD84FB8004B5034 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F61B0E22FD87231004B5034 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
