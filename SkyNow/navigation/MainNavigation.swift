@@ -9,12 +9,28 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @State private var selectedTab = 0
     @StateObject private var manager = ErrorMessageController.shared
     var body: some View {
-        NavigationView {
-            Text("Hello, iOS!")
-        }
-        .onAppear{
+        TabView(selection: $selectedTab) {
+            
+            HomeScreen()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+                .tag(0)
+
+            SearchScreen()
+                .tabItem {
+                    Label("Search", systemImage: "magnifyingglass")
+                }
+                .tag(1)
+
+            SavedScreen()
+                .tabItem {
+                    Label("Saved", systemImage: "bookmark.fill")
+                }
+                .tag(2)
             
         }
         .alert(

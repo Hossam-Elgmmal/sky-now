@@ -28,6 +28,7 @@ class WeatherRepoImp : WeatherRepo {
         case .success(let response):
             return response
         case .failure(let weatherError):
+            print(weatherError.localizedDescription)
 
             if let errorMessage = weatherError.errorDescription {
                 await ErrorMessageController.shared.showAlert(message: errorMessage)
