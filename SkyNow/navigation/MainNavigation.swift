@@ -26,7 +26,7 @@ struct MainNavigation: View {
                 }
                 .tag(1)
 
-            SavedScreen()
+            SavedLocationsScreen()
                 .tabItem {
                     Label("Saved", systemImage: "bookmark.fill")
                 }

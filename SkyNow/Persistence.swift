@@ -4,42 +4,79 @@
 //
 //  Created by Hossam on 09/06/2026.
 //
-
 import CoreData
+import Combine
 
-struct PersistenceController {
+final class PersistenceController {
     static let shared = PersistenceController()
-
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-        }
-        do {
-            try viewContext.save()
-        } catch {
-            /// TODO handle errors
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
 
     let container: NSPersistentContainer
 
-    init(inMemory: Bool = false) {
+    private init() {
         container = NSPersistentContainer(name: "SkyNow")
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+        container.loadPersistentStores { _, error in
+            if let error = error { fatalError("CoreData failed: \(error)") }
         }
+        container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         container.viewContext.automaticallyMergesChangesFromParent = true
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                /// TODO handle errors
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
+    }
+}
+
+extension SavedCity {
+    var city: City {
+        City(
+            name: name ?? "",
+            country: country ?? "",
+            lat: lat,
+            lon: lon
+        )
+    }
+}
+
+@MainActor
+final class SavedCitiesStore: ObservableObject {
+    @Published private(set) var saved: [SavedCity] = []
+
+    private let ctx: NSManagedObjectContext
+
+    init(context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
+        self.ctx = context
+        fetch()
+    }
+
+    func isSaved(_ city: City) -> Bool {
+        saved.contains { $0.name == city.name && $0.country == city.country }
+    }
+
+    func toggle(_ city: City) {
+        if let existing = saved.first(where: { $0.name == city.name && $0.country == city.country }) {
+            ctx.delete(existing)
+        } else {
+            let entity = SavedCity(context: ctx)
+            entity.id = UUID()
+            entity.name = city.name
+            entity.country = city.country
+            entity.lat = city.lat
+            entity.lon = city.lon
+            entity.addedAt = Date()
+        }
+        save()
+    }
+
+    func delete(at offsets: IndexSet) {
+        offsets.map { saved[$0] }.forEach(ctx.delete)
+        save()
+    }
+
+    private func fetch() {
+        let req = SavedCity.fetchRequest()
+        req.sortDescriptors = [NSSortDescriptor(keyPath: \SavedCity.addedAt, ascending: true)]
+        saved = (try? ctx.fetch(req)) ?? []
+    }
+
+    private func save() {
+        guard ctx.hasChanges else { return }
+        try? ctx.save()
+        fetch()
     }
 }

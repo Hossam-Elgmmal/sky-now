@@ -27,8 +27,7 @@ struct HourRow: View {
                 AsyncImage(url: URL(string: "https:\(icon)")) { img in
                     img.resizable()
                         .scaledToFill()
-                        .padding(-12)
-                        .clipped()
+                        .padding(-8)
                 } placeholder: { Color.clear }
                 .frame(width: 32, height: 32)
                 .padding(.horizontal, 12)

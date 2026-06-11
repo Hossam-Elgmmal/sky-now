@@ -20,7 +20,7 @@ struct BottomSection: View {
                 icon: "eye.fill",
                 title: "VISIBILITY",
                 value: current?.visKm.map { "\(Int($0)) km" } ?? "—",
-                accentColor: Color("skyLighBlue")
+                accentColor: Color("skyLightBlue")
             )
             StatCard(
                 icon: "humidity.fill",

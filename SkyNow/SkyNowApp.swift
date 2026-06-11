@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct SkyNowApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject private var store = SavedCitiesStore()
     let theme = WeatherTheme.current
 
     init() {
@@ -44,7 +44,7 @@ struct SkyNowApp: App {
     var body: some Scene {
         WindowGroup {
             MainNavigation()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(store)
                 .environment(\.weatherTheme, theme)
         }
     }
