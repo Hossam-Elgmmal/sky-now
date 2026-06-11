@@ -9,5 +9,5 @@ import Foundation
 
 
 struct Forecast: Codable {
-    let forecastday: [Forecastday?]
+    let forecastday: [Forecastday]?
 }

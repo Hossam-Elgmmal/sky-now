@@ -15,6 +15,7 @@ final class HomeViewModel: ObservableObject {
     @Published var weatherResponse: WeatherResponse?
     @Published var isFetching = false
     @Published var showSettingsAlert = false
+    @Published var currentLocation: CLLocation?
 
     // MARK: - Dependencies
     private let weatherRepo: WeatherRepo
@@ -45,6 +46,19 @@ final class HomeViewModel: ObservableObject {
     func retryLocation() {
         locationManager.retryLocation()
     }
+    
+    func refresh() {
+        if let location = currentLocation {
+            Task { [weak self] in
+                await self?.fetchWeather(
+                    lat: location.coordinate.latitude,
+                    long: location.coordinate.longitude
+                )
+            }
+        } else {
+            retryLocation()
+        }
+    }
 
     // MARK: - Private bindings
 
@@ -54,6 +68,7 @@ final class HomeViewModel: ObservableObject {
             .removeDuplicates { $0.distance(from: $1) < 50 }
             .sink { [weak self] newLocation in
                 guard let self = self else { return }
+                self.currentLocation = newLocation
                 Task { [weak self] in
                     await self?.fetchWeather(
                         lat: newLocation.coordinate.latitude,

@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct MainNavigation: View {
     @State private var selectedTab = 0
     @StateObject private var manager = ErrorMessageController.shared
     var body: some View {

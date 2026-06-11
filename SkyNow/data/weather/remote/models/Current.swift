@@ -23,6 +23,7 @@ struct Current: Codable {
     let visKm: Double?
     let uv: Double?
     let gustKph: Double?
+    let pressureMb: Double
 
     enum CodingKeys: String, CodingKey {
         case lastUpdated = "last_updated"
@@ -39,5 +40,6 @@ struct Current: Codable {
         case visKm = "vis_km"
         case uv
         case gustKph = "gust_kph"
+        case pressureMb = "pressure_mb"
     }
 }

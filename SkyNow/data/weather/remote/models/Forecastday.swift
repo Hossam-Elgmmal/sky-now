@@ -12,7 +12,7 @@ struct Forecastday: Codable {
     let date: String?
     let day: Day?
     let astro: Astro?
-    let hour: [Hour]
+    let hour: [Hour]?
 
     enum CodingKeys: String, CodingKey {
         case date
