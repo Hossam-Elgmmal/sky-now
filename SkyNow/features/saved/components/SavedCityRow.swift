@@ -29,9 +29,6 @@ struct SavedCityRow: View {
                     .foregroundStyle(theme.foregroundColor.opacity(0.80))
             }
             Spacer()
-            Image(systemName: "chevron.right")
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(theme.foregroundColor.opacity(0.55))
         }
         .padding(.leading, 20)
         .padding(.trailing, 12)

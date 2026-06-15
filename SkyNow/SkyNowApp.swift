@@ -23,15 +23,20 @@ struct SkyNowApp: App {
         UITableView.appearance().backgroundColor = .clear
         UICollectionView.appearance().backgroundColor = .clear
         
-        let fg = UIColor(theme.foregroundColor)
         let appearance2 = UITabBarAppearance()
         appearance2.configureWithTransparentBackground()
         appearance2.backgroundColor = theme == .morning
             ? UIColor.white
             : UIColor.black
-
-        appearance2.stackedLayoutAppearance.selected.iconColor = fg
-        appearance2.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: fg]
+        
+        let selectedLight = UIColor(named: "skyLightBlue")
+        let selected = UIColor(named: "skyBlue")
+        appearance2.stackedLayoutAppearance.selected.iconColor = selected
+        if theme == .morning {
+            appearance2.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: selected!]
+        } else {
+            appearance2.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: selectedLight!]
+        }
 
         let unselected = UIColor(theme.foregroundColor.opacity(0.6))
         appearance2.stackedLayoutAppearance.normal.iconColor = unselected

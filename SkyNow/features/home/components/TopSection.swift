@@ -14,12 +14,12 @@ struct TopSection: View {
 
     var body: some View {
         VStack(spacing: 6) {
-            // Location pill
+
             HStack(spacing: 5) {
                 Image(systemName: "location.fill")
                     .font(.system(size: 11))
                 Text(weather.location?.name ?? "—")
-                    .font(.system(size: 14, weight: .semibold, design: .rounded))
+                    .font(.system(size: 14, design: .rounded))
             }
             .foregroundStyle(theme.foregroundColor.opacity(0.75))
             .padding(.horizontal, 14)
@@ -30,21 +30,20 @@ struct TopSection: View {
                     .background(Capsule().fill(.ultraThinMaterial))
                     .clipShape(Capsule())
             )
-            // Temperature
+
             Text(tempString(weather.current?.tempC))
-                .font(.system(size: 104, weight: .semibold, design: .rounded))
+                .font(.system(size: 104, design: .rounded))
                 .foregroundStyle(theme.foregroundColor)
                 .shadow(color: .black.opacity(0.12), radius: 8, y: 4)
 
-            // Condition icon + text
+
             VStack {
                 if let icon = weather.current?.condition?.icon {
                     AsyncImage(url: URL(string: "https:\(icon)")) { img in
                         img.resizable()
                            .scaledToFill()
-                           .padding(-40)
+                           .padding(-28)
                            .frame(width: 80, height: 80)
-                           .clipped()
                            .shadow(color: .black.opacity(0.15), radius: 6, y: 3)
                     } placeholder: {
                         Color.clear
